@@ -2,19 +2,41 @@ plugins {
     id 'org.springframework.boot' version '2.7.4'
     id 'io.spring.dependency-management' version '1.0.14.RELEASE'
     id 'java'
+    id 'me.champeau.jmh' version '0.6.6'
+
+}
+
+
+group 'io.shirohoo'
+
+repositories {
+    mavenCentral()
+}
+
+jmh {
+    fork = 1
+    warmupIterations = 1
+    iterations = 1
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+
+    testImplementation group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.17.4'
+    testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.17.4'
+
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.projectlombok:lombok:1.18.22'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 tasks.named('test') {

@@ -54,7 +54,7 @@ public class PredicateTest {
     // 값을 파라미터화 하는 것 보다, 동작을 파라미터화 하는게 더 간결하고 유연하다
     void test222() {
         // 값 파라미터화
-        filterApples(apples, 150, GREEN);
+//        filterApples(apples, 150, GREEN);
         // 동작 파라미터화 v1
         filterApples(apples, apple -> apple.getWeight() > 150);
         // 동작 파라미터화 v2

@@ -32,8 +32,8 @@ public class FunctionalInterfaceTest {
 
 
     void test() {
-        Consumer<Apple> appleConsumer; // T 받아서 void 반환
-        Predicate<Apple> appleConsumer; // T 받아서 bool 반환
-        Function<Apple, Apple> appleConsumer; // T 받아서 R 반환
+//        Consumer<Apple> appleConsumer; // T 받아서 void 반환
+//        Predicate<Apple> appleConsumer; // T 받아서 bool 반환
+//        Function<Apple, Apple> appleConsumer; // T 받아서 R 반환
     }
 }
